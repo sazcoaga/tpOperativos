@@ -1,0 +1,2088 @@
+==15044== Helgrind, a thread error detector
+==15044== Copyright (C) 2007-2015, and GNU GPL'd, by OpenWorks LLP et al.
+==15044== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==15044== Command: ./mi_ram
+==15044== Parent PID: 15034
+==15044== 
+==15044== ---Thread-Announcement------------------------------------------
+==15044== 
+==15044== Thread #2 was created
+==15044==    at 0x4191091: clone (clone.S:88)
+==15044==    by 0x40661AD: create_thread (createthread.c:102)
+==15044==    by 0x406799E: pthread_create@@GLIBC_2.1 (pthread_create.c:679)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x8049410: main (mi_ram.c:20)
+==15044== 
+==15044== ---Thread-Announcement------------------------------------------
+==15044== 
+==15044== Thread #1 is the program's root thread
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044== Possible data race during write of size 4 at 0x429B7C8 by thread #2
+==15044== Locks held: none
+==15044==    at 0x4036545: memset (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067820: get_cached_stack (allocatestack.c:251)
+==15044==    by 0x4067820: allocate_stack (allocatestack.c:501)
+==15044==    by 0x4067820: pthread_create@@GLIBC_2.1 (pthread_create.c:539)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x429b7c8 is 8 bytes inside a block of size 136 alloc'd
+==15044==    at 0x402F2A8: calloc (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4011726: allocate_dtv (dl-tls.c:322)
+==15044==    by 0x401214B: _dl_allocate_tls (dl-tls.c:539)
+==15044==    by 0x4067CC3: allocate_stack (allocatestack.c:588)
+==15044==    by 0x4067CC3: pthread_create@@GLIBC_2.1 (pthread_create.c:539)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804944F: main (mi_ram.c:25)
+==15044==  Block was alloc'd by thread #1
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044== Possible data race during write of size 1 at 0x429B7D4 by thread #2
+==15044== Locks held: none
+==15044==    at 0x4036545: memset (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067820: get_cached_stack (allocatestack.c:251)
+==15044==    by 0x4067820: allocate_stack (allocatestack.c:501)
+==15044==    by 0x4067820: pthread_create@@GLIBC_2.1 (pthread_create.c:539)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x429b7d4 is 20 bytes inside a block of size 136 alloc'd
+==15044==    at 0x402F2A8: calloc (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4011726: allocate_dtv (dl-tls.c:322)
+==15044==    by 0x401214B: _dl_allocate_tls (dl-tls.c:539)
+==15044==    by 0x4067CC3: allocate_stack (allocatestack.c:588)
+==15044==    by 0x4067CC3: pthread_create@@GLIBC_2.1 (pthread_create.c:539)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804944F: main (mi_ram.c:25)
+==15044==  Block was alloc'd by thread #1
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044== Possible data race during write of size 2 at 0x429B7D6 by thread #2
+==15044== Locks held: none
+==15044==    at 0x4036545: memset (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067820: get_cached_stack (allocatestack.c:251)
+==15044==    by 0x4067820: allocate_stack (allocatestack.c:501)
+==15044==    by 0x4067820: pthread_create@@GLIBC_2.1 (pthread_create.c:539)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x429b7d6 is 22 bytes inside a block of size 136 alloc'd
+==15044==    at 0x402F2A8: calloc (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4011726: allocate_dtv (dl-tls.c:322)
+==15044==    by 0x401214B: _dl_allocate_tls (dl-tls.c:539)
+==15044==    by 0x4067CC3: allocate_stack (allocatestack.c:588)
+==15044==    by 0x4067CC3: pthread_create@@GLIBC_2.1 (pthread_create.c:539)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804944F: main (mi_ram.c:25)
+==15044==  Block was alloc'd by thread #1
+==15044== 
+==15044== ---Thread-Announcement------------------------------------------
+==15044== 
+==15044== Thread #6 was created
+==15044==    at 0x4191091: clone (clone.S:88)
+==15044==    by 0x40661AD: create_thread (createthread.c:102)
+==15044==    by 0x406799E: pthread_create@@GLIBC_2.1 (pthread_create.c:679)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044== Possible data race during read of size 4 at 0x668DB54 by thread #6
+==15044== Locks held: none
+==15044==    at 0x80496CE: atenderDiscordiador (mi_ram.c:96)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== This conflicts with a previous write of size 4 by thread #2
+==15044== Locks held: none
+==15044==    at 0x406792B: pthread_create@@GLIBC_2.1 (pthread_create.c:591)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x668db54 is on thread #6's stack
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044== Possible data race during read of size 4 at 0x668DB54 by thread #6
+==15044== Locks held: none
+==15044==    at 0x405933C: string_from_format (in /usr/lib/libcommons.so)
+==15044==    by 0x4059144: _log_write_in_level (in /usr/lib/libcommons.so)
+==15044==    by 0x4058F6D: log_info (in /usr/lib/libcommons.so)
+==15044==    by 0x804980F: atenderDiscordiador (mi_ram.c:132)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== This conflicts with a previous write of size 4 by thread #2
+==15044== Locks held: none
+==15044==    at 0x406792B: pthread_create@@GLIBC_2.1 (pthread_create.c:591)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x668db54 is on thread #6's stack
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044== Possible data race during read of size 4 at 0x668DB54 by thread #6
+==15044== Locks held: none
+==15044==    at 0x4058F75: log_info (in /usr/lib/libcommons.so)
+==15044==    by 0x804980F: atenderDiscordiador (mi_ram.c:132)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== This conflicts with a previous write of size 4 by thread #2
+==15044== Locks held: none
+==15044==    at 0x406792B: pthread_create@@GLIBC_2.1 (pthread_create.c:591)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x668db54 is on thread #6's stack
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044== Possible data race during read of size 4 at 0x668DB54 by thread #6
+==15044== Locks held: none
+==15044==    at 0x405933C: string_from_format (in /usr/lib/libcommons.so)
+==15044==    by 0x4059144: _log_write_in_level (in /usr/lib/libcommons.so)
+==15044==    by 0x4058F6D: log_info (in /usr/lib/libcommons.so)
+==15044==    by 0x80498F9: atenderDiscordiador (mi_ram.c:156)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== This conflicts with a previous write of size 4 by thread #2
+==15044== Locks held: none
+==15044==    at 0x406792B: pthread_create@@GLIBC_2.1 (pthread_create.c:591)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x668db54 is on thread #6's stack
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044== Possible data race during read of size 4 at 0x668DB54 by thread #6
+==15044== Locks held: none
+==15044==    at 0x405933C: string_from_format (in /usr/lib/libcommons.so)
+==15044==    by 0x4059144: _log_write_in_level (in /usr/lib/libcommons.so)
+==15044==    by 0x4058F6D: log_info (in /usr/lib/libcommons.so)
+==15044==    by 0x8049916: atenderDiscordiador (mi_ram.c:158)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== This conflicts with a previous write of size 4 by thread #2
+==15044== Locks held: none
+==15044==    at 0x406792B: pthread_create@@GLIBC_2.1 (pthread_create.c:591)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x668db54 is on thread #6's stack
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044== Possible data race during read of size 4 at 0x668DB54 by thread #6
+==15044== Locks held: none
+==15044==    at 0x804E615: framesDisponibles (mi_ram.c:2001)
+==15044==    by 0x804A73C: buscarEspacioNecesario (mi_ram.c:523)
+==15044==    by 0x804992F: atenderDiscordiador (mi_ram.c:162)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== This conflicts with a previous write of size 4 by thread #2
+==15044== Locks held: none
+==15044==    at 0x406792B: pthread_create@@GLIBC_2.1 (pthread_create.c:591)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x668db54 is on thread #6's stack
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044== Possible data race during read of size 4 at 0x668DB54 by thread #6
+==15044== Locks held: none
+==15044==    at 0x405933C: string_from_format (in /usr/lib/libcommons.so)
+==15044==    by 0x4059144: _log_write_in_level (in /usr/lib/libcommons.so)
+==15044==    by 0x4058F6D: log_info (in /usr/lib/libcommons.so)
+==15044==    by 0x804996E: atenderDiscordiador (mi_ram.c:171)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== This conflicts with a previous write of size 4 by thread #2
+==15044== Locks held: none
+==15044==    at 0x406792B: pthread_create@@GLIBC_2.1 (pthread_create.c:591)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x668db54 is on thread #6's stack
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044== Possible data race during read of size 4 at 0x668DB54 by thread #6
+==15044== Locks held: none
+==15044==    at 0x405933C: string_from_format (in /usr/lib/libcommons.so)
+==15044==    by 0x4059144: _log_write_in_level (in /usr/lib/libcommons.so)
+==15044==    by 0x4058F6D: log_info (in /usr/lib/libcommons.so)
+==15044==    by 0x8049EF0: atenderDiscordiador (mi_ram.c:297)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== This conflicts with a previous write of size 4 by thread #2
+==15044== Locks held: none
+==15044==    at 0x406792B: pthread_create@@GLIBC_2.1 (pthread_create.c:591)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x668db54 is on thread #6's stack
+==15044== 
+==15044== ---Thread-Announcement------------------------------------------
+==15044== 
+==15044== Thread #5 was created
+==15044==    at 0x4191091: clone (clone.S:88)
+==15044==    by 0x40661AD: create_thread (createthread.c:102)
+==15044==    by 0x406799E: pthread_create@@GLIBC_2.1 (pthread_create.c:679)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804944F: main (mi_ram.c:25)
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044== Possible data race during read of size 4 at 0x668DB0C by thread #6
+==15044== Locks held: none
+==15044==    at 0x4058B52: mem_hexstring (in /usr/lib/libcommons.so)
+==15044==    by 0x8049F6E: atenderDiscordiador (mi_ram.c:306)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== This conflicts with a previous write of size 4 by thread #5
+==15044== Locks held: none
+==15044==    at 0x40CF3AF: __ctype_init (ctype-info.c:31)
+==15044==    by 0x40671FC: start_thread (pthread_create.c:268)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x668db0c is on thread #6's stack
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044== Possible data race during read of size 4 at 0x668DB54 by thread #6
+==15044== Locks held: none
+==15044==    at 0x405933C: string_from_format (in /usr/lib/libcommons.so)
+==15044==    by 0x4059144: _log_write_in_level (in /usr/lib/libcommons.so)
+==15044==    by 0x4058F6D: log_info (in /usr/lib/libcommons.so)
+==15044==    by 0x8049F87: atenderDiscordiador (mi_ram.c:306)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== This conflicts with a previous write of size 4 by thread #2
+==15044== Locks held: none
+==15044==    at 0x406792B: pthread_create@@GLIBC_2.1 (pthread_create.c:591)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x668db54 is on thread #6's stack
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044==  Lock at 0x8052184 was first observed
+==15044==    at 0x4032F68: pthread_mutex_init (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804A66B: iniciarMemoria (mi_ram.c:502)
+==15044==    by 0x80493FA: main (mi_ram.c:14)
+==15044==  Address 0x8052184 is 0 bytes inside data symbol "mutexListaFrames"
+==15044== 
+==15044== Possible data race during read of size 4 at 0x668DB54 by thread #6
+==15044== Locks held: 1, at address 0x8052184
+==15044==    at 0x405A3CE: list_find (in /usr/lib/libcommons.so)
+==15044==    by 0x804E734: buscarFrame (mi_ram.c:2022)
+==15044==    by 0x804D4CE: llenarFramesConPatota (mi_ram.c:1627)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== This conflicts with a previous write of size 4 by thread #2
+==15044== Locks held: none
+==15044==    at 0x406792B: pthread_create@@GLIBC_2.1 (pthread_create.c:591)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x668db54 is on thread #6's stack
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044== Possible data race during read of size 4 at 0x668DB54 by thread #6
+==15044== Locks held: none
+==15044==    at 0x804E76D: buscarFrame (mi_ram.c:2033)
+==15044==    by 0x804D4CE: llenarFramesConPatota (mi_ram.c:1627)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== This conflicts with a previous write of size 4 by thread #2
+==15044== Locks held: none
+==15044==    at 0x406792B: pthread_create@@GLIBC_2.1 (pthread_create.c:591)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x668db54 is on thread #6's stack
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044== Possible data race during read of size 4 at 0x668DB54 by thread #6
+==15044== Locks held: none
+==15044==    at 0x405A045: list_add (in /usr/lib/libcommons.so)
+==15044==    by 0x804D5E3: llenarFramesConPatota (mi_ram.c:1650)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== This conflicts with a previous write of size 4 by thread #2
+==15044== Locks held: none
+==15044==    at 0x406792B: pthread_create@@GLIBC_2.1 (pthread_create.c:591)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x668db54 is on thread #6's stack
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044== Possible data race during read of size 4 at 0x668DB54 by thread #6
+==15044== Locks held: none
+==15044==    at 0x804E6E9: buscarFrame (mi_ram.c:2015)
+==15044==    by 0x804D4CE: llenarFramesConPatota (mi_ram.c:1627)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== This conflicts with a previous write of size 4 by thread #2
+==15044== Locks held: none
+==15044==    at 0x406792B: pthread_create@@GLIBC_2.1 (pthread_create.c:591)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x668db54 is on thread #6's stack
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044==  Lock at 0x80521F4 was first observed
+==15044==    at 0x4032F68: pthread_mutex_init (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804A659: iniciarMemoria (mi_ram.c:501)
+==15044==    by 0x80493FA: main (mi_ram.c:14)
+==15044==  Address 0x80521f4 is 0 bytes inside data symbol "mutexListaTablas"
+==15044== 
+==15044== Possible data race during read of size 4 at 0x668DB54 by thread #6
+==15044== Locks held: 1, at address 0x80521F4
+==15044==    at 0x405A045: list_add (in /usr/lib/libcommons.so)
+==15044==    by 0x804D698: llenarFramesConPatota (mi_ram.c:1673)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== This conflicts with a previous write of size 4 by thread #2
+==15044== Locks held: none
+==15044==    at 0x406792B: pthread_create@@GLIBC_2.1 (pthread_create.c:591)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x668db54 is on thread #6's stack
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044== Possible data race during read of size 4 at 0x668DB54 by thread #6
+==15044== Locks held: none
+==15044==    at 0x804A51D: atenderDiscordiador (mi_ram.c:476)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== This conflicts with a previous write of size 4 by thread #2
+==15044== Locks held: none
+==15044==    at 0x406792B: pthread_create@@GLIBC_2.1 (pthread_create.c:591)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x668db54 is on thread #6's stack
+==15044== 
+==15044== ---Thread-Announcement------------------------------------------
+==15044== 
+==15044== Thread #8 was created
+==15044==    at 0x4191091: clone (clone.S:88)
+==15044==    by 0x40661AD: create_thread (createthread.c:102)
+==15044==    by 0x406799E: pthread_create@@GLIBC_2.1 (pthread_create.c:679)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044== Possible data race during read of size 4 at 0x668DB54 by thread #8
+==15044== Locks held: none
+==15044==    at 0x804E6BD: framesDisponiblesSwap (mi_ram.c:2013)
+==15044==    by 0x804A773: buscarEspacioNecesario (mi_ram.c:531)
+==15044==    by 0x804992F: atenderDiscordiador (mi_ram.c:162)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== This conflicts with a previous write of size 4 by thread #2
+==15044== Locks held: none
+==15044==    at 0x406792B: pthread_create@@GLIBC_2.1 (pthread_create.c:591)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x668db54 is on thread #8's stack
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044== Possible data race during read of size 4 at 0x668DB54 by thread #8
+==15044== Locks held: none
+==15044==    at 0x804D138: seleccionarVictima (mi_ram.c:1524)
+==15044==    by 0x804CFBA: llevarPaginaASwap (mi_ram.c:1488)
+==15044==    by 0x804E755: buscarFrame (mi_ram.c:2027)
+==15044==    by 0x804D4CE: llenarFramesConPatota (mi_ram.c:1627)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== This conflicts with a previous write of size 4 by thread #2
+==15044== Locks held: none
+==15044==    at 0x406792B: pthread_create@@GLIBC_2.1 (pthread_create.c:591)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x668db54 is on thread #8's stack
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044== Possible data race during read of size 4 at 0x668DB54 by thread #8
+==15044== Locks held: none
+==15044==    at 0x4058F4C: log_info (in /usr/lib/libcommons.so)
+==15044==    by 0x804D2D3: seleccionarVictima (mi_ram.c:1571)
+==15044==    by 0x804CFBA: llevarPaginaASwap (mi_ram.c:1488)
+==15044==    by 0x804E755: buscarFrame (mi_ram.c:2027)
+==15044==    by 0x804D4CE: llenarFramesConPatota (mi_ram.c:1627)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== This conflicts with a previous write of size 4 by thread #2
+==15044== Locks held: none
+==15044==    at 0x406792B: pthread_create@@GLIBC_2.1 (pthread_create.c:591)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x668db54 is on thread #8's stack
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044== Possible data race during read of size 4 at 0x668DB54 by thread #8
+==15044== Locks held: none
+==15044==    at 0x405933C: string_from_format (in /usr/lib/libcommons.so)
+==15044==    by 0x4059144: _log_write_in_level (in /usr/lib/libcommons.so)
+==15044==    by 0x4058F6D: log_info (in /usr/lib/libcommons.so)
+==15044==    by 0x804D2D3: seleccionarVictima (mi_ram.c:1571)
+==15044==    by 0x804CFBA: llevarPaginaASwap (mi_ram.c:1488)
+==15044==    by 0x804E755: buscarFrame (mi_ram.c:2027)
+==15044==    by 0x804D4CE: llenarFramesConPatota (mi_ram.c:1627)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== This conflicts with a previous write of size 4 by thread #2
+==15044== Locks held: none
+==15044==    at 0x406792B: pthread_create@@GLIBC_2.1 (pthread_create.c:591)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x668db54 is on thread #8's stack
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044== Possible data race during read of size 4 at 0x668DB54 by thread #8
+==15044== Locks held: none
+==15044==    at 0x804E799: buscarFrameSwap (mi_ram.c:2035)
+==15044==    by 0x804D04D: llevarPaginaASwap (mi_ram.c:1506)
+==15044==    by 0x804E755: buscarFrame (mi_ram.c:2027)
+==15044==    by 0x804D4CE: llenarFramesConPatota (mi_ram.c:1627)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== This conflicts with a previous write of size 4 by thread #2
+==15044== Locks held: none
+==15044==    at 0x406792B: pthread_create@@GLIBC_2.1 (pthread_create.c:591)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x668db54 is on thread #8's stack
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044==  Lock at 0x8052140 was first observed
+==15044==    at 0x4032F68: pthread_mutex_init (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804A67D: iniciarMemoria (mi_ram.c:503)
+==15044==    by 0x80493FA: main (mi_ram.c:14)
+==15044==  Address 0x8052140 is 0 bytes inside data symbol "mutexListaFramesSwap"
+==15044== 
+==15044== Possible data race during read of size 4 at 0x668DB54 by thread #8
+==15044== Locks held: 1, at address 0x8052140
+==15044==    at 0x405A3CE: list_find (in /usr/lib/libcommons.so)
+==15044==    by 0x804E7E4: buscarFrameSwap (mi_ram.c:2042)
+==15044==    by 0x804D04D: llevarPaginaASwap (mi_ram.c:1506)
+==15044==    by 0x804E755: buscarFrame (mi_ram.c:2027)
+==15044==    by 0x804D4CE: llenarFramesConPatota (mi_ram.c:1627)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== This conflicts with a previous write of size 4 by thread #2
+==15044== Locks held: none
+==15044==    at 0x406792B: pthread_create@@GLIBC_2.1 (pthread_create.c:591)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x668db54 is on thread #8's stack
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044== Possible data race during read of size 4 at 0x668DB54 by thread #8
+==15044== Locks held: none
+==15044==    at 0x804E80B: buscarFrameSwap (mi_ram.c:2048)
+==15044==    by 0x804D04D: llevarPaginaASwap (mi_ram.c:1506)
+==15044==    by 0x804E755: buscarFrame (mi_ram.c:2027)
+==15044==    by 0x804D4CE: llenarFramesConPatota (mi_ram.c:1627)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== This conflicts with a previous write of size 4 by thread #2
+==15044== Locks held: none
+==15044==    at 0x406792B: pthread_create@@GLIBC_2.1 (pthread_create.c:591)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x668db54 is on thread #8's stack
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044==  Lock at 0x8052184 was first observed
+==15044==    at 0x4032F68: pthread_mutex_init (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804A66B: iniciarMemoria (mi_ram.c:502)
+==15044==    by 0x80493FA: main (mi_ram.c:14)
+==15044==  Address 0x8052184 is 0 bytes inside data symbol "mutexListaFrames"
+==15044== 
+==15044== Possible data race during read of size 4 at 0x668DB54 by thread #8
+==15044== Locks held: 1, at address 0x8052184
+==15044==    at 0x405A3CE: list_find (in /usr/lib/libcommons.so)
+==15044==    by 0x804E734: buscarFrame (mi_ram.c:2022)
+==15044==    by 0x804E75A: buscarFrame (mi_ram.c:2028)
+==15044==    by 0x804D4CE: llenarFramesConPatota (mi_ram.c:1627)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== This conflicts with a previous write of size 4 by thread #2
+==15044== Locks held: none
+==15044==    at 0x406792B: pthread_create@@GLIBC_2.1 (pthread_create.c:591)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x668db54 is on thread #8's stack
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044== Possible data race during read of size 4 at 0x668DB54 by thread #8
+==15044== Locks held: none
+==15044==    at 0x804E76D: buscarFrame (mi_ram.c:2033)
+==15044==    by 0x804E75A: buscarFrame (mi_ram.c:2028)
+==15044==    by 0x804D4CE: llenarFramesConPatota (mi_ram.c:1627)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== This conflicts with a previous write of size 4 by thread #2
+==15044== Locks held: none
+==15044==    at 0x406792B: pthread_create@@GLIBC_2.1 (pthread_create.c:591)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x668db54 is on thread #8's stack
+==15044== 
+==15044== ---Thread-Announcement------------------------------------------
+==15044== 
+==15044== Thread #9 was created
+==15044==    at 0x4191091: clone (clone.S:88)
+==15044==    by 0x40661AD: create_thread (createthread.c:102)
+==15044==    by 0x406799E: pthread_create@@GLIBC_2.1 (pthread_create.c:679)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044== Possible data race during read of size 4 at 0x668DB54 by thread #9
+==15044== Locks held: none
+==15044==    at 0x405933C: string_from_format (in /usr/lib/libcommons.so)
+==15044==    by 0x4059144: _log_write_in_level (in /usr/lib/libcommons.so)
+==15044==    by 0x4058F6D: log_info (in /usr/lib/libcommons.so)
+==15044==    by 0x804A3B8: atenderDiscordiador (mi_ram.c:434)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== This conflicts with a previous write of size 4 by thread #2
+==15044== Locks held: none
+==15044==    at 0x406792B: pthread_create@@GLIBC_2.1 (pthread_create.c:591)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x668db54 is on thread #9's stack
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044== Possible data race during read of size 4 at 0x668DB54 by thread #9
+==15044== Locks held: none
+==15044==    at 0x4058F75: log_info (in /usr/lib/libcommons.so)
+==15044==    by 0x804A3B8: atenderDiscordiador (mi_ram.c:434)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== This conflicts with a previous write of size 4 by thread #2
+==15044== Locks held: none
+==15044==    at 0x406792B: pthread_create@@GLIBC_2.1 (pthread_create.c:591)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x668db54 is on thread #9's stack
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044==  Lock at 0x8052260 was first observed
+==15044==    at 0x4032F68: pthread_mutex_init (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804A6B3: iniciarMemoria (mi_ram.c:506)
+==15044==    by 0x80493FA: main (mi_ram.c:14)
+==15044==  Address 0x8052260 is 0 bytes inside data symbol "mutexListaTripulantes"
+==15044== 
+==15044== Possible data race during read of size 4 at 0x428B898 by thread #9
+==15044== Locks held: 1, at address 0x8052260
+==15044==    at 0x405B1B9: list_find_element (in /usr/lib/libcommons.so)
+==15044==    by 0x405A413: list_find (in /usr/lib/libcommons.so)
+==15044==    by 0x804D9F9: actualizarEstadoPaginacion (mi_ram.c:1744)
+==15044==    by 0x804AB4F: actualizarEstadoTripulante (mi_ram.c:644)
+==15044==    by 0x804A430: atenderDiscordiador (mi_ram.c:443)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== This conflicts with a previous write of size 4 by thread #6
+==15044== Locks held: none
+==15044==    at 0x405B0B8: list_link_element (in /usr/lib/libcommons.so)
+==15044==    by 0x405B254: list_add_element (in /usr/lib/libcommons.so)
+==15044==    by 0x405A092: list_add (in /usr/lib/libcommons.so)
+==15044==    by 0x8049ED3: atenderDiscordiador (mi_ram.c:296)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x428b898 is 0 bytes inside a block of size 8 alloc'd
+==15044==    at 0x402D36C: malloc (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4059FEA: list_create (in /usr/lib/libcommons.so)
+==15044==    by 0x804A633: iniciarMemoria (mi_ram.c:499)
+==15044==    by 0x80493FA: main (mi_ram.c:14)
+==15044==  Block was alloc'd by thread #1
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044==  Lock at 0x8052260 was first observed
+==15044==    at 0x4032F68: pthread_mutex_init (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804A6B3: iniciarMemoria (mi_ram.c:506)
+==15044==    by 0x80493FA: main (mi_ram.c:14)
+==15044==  Address 0x8052260 is 0 bytes inside data symbol "mutexListaTripulantes"
+==15044== 
+==15044== Possible data race during read of size 4 at 0x429BA88 by thread #9
+==15044== Locks held: 1, at address 0x8052260
+==15044==    at 0x405A38C: _find_by_condition.2332 (in /usr/lib/libcommons.so)
+==15044==    by 0x405B1E1: list_find_element (in /usr/lib/libcommons.so)
+==15044==    by 0x405A413: list_find (in /usr/lib/libcommons.so)
+==15044==    by 0x804D9F9: actualizarEstadoPaginacion (mi_ram.c:1744)
+==15044==    by 0x804AB4F: actualizarEstadoTripulante (mi_ram.c:644)
+==15044==    by 0x804A430: atenderDiscordiador (mi_ram.c:443)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x429ba88 is 0 bytes inside a block of size 8 alloc'd
+==15044==    at 0x402D36C: malloc (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x405B14D: list_create_element (in /usr/lib/libcommons.so)
+==15044==    by 0x405A07A: list_add (in /usr/lib/libcommons.so)
+==15044==    by 0x8049ED3: atenderDiscordiador (mi_ram.c:296)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Block was alloc'd by thread #6
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044==  Lock at 0x8052260 was first observed
+==15044==    at 0x4032F68: pthread_mutex_init (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804A6B3: iniciarMemoria (mi_ram.c:506)
+==15044==    by 0x80493FA: main (mi_ram.c:14)
+==15044==  Address 0x8052260 is 0 bytes inside data symbol "mutexListaTripulantes"
+==15044== 
+==15044== Possible data race during read of size 4 at 0x429BA40 by thread #9
+==15044== Locks held: 1, at address 0x8052260
+==15044==    at 0x804D95E: coincideID.7670 (mi_ram.c:1737)
+==15044==    by 0x405A395: _find_by_condition.2332 (in /usr/lib/libcommons.so)
+==15044==    by 0x405B1E1: list_find_element (in /usr/lib/libcommons.so)
+==15044==    by 0x405A413: list_find (in /usr/lib/libcommons.so)
+==15044==    by 0x804D9F9: actualizarEstadoPaginacion (mi_ram.c:1744)
+==15044==    by 0x804AB4F: actualizarEstadoTripulante (mi_ram.c:644)
+==15044==    by 0x804A430: atenderDiscordiador (mi_ram.c:443)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x429ba40 is 0 bytes inside a block of size 20 alloc'd
+==15044==    at 0x402D36C: malloc (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x8049E34: atenderDiscordiador (mi_ram.c:289)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Block was alloc'd by thread #6
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044==  Lock at 0x80521F4 was first observed
+==15044==    at 0x4032F68: pthread_mutex_init (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804A659: iniciarMemoria (mi_ram.c:501)
+==15044==    by 0x80493FA: main (mi_ram.c:14)
+==15044==  Address 0x80521f4 is 0 bytes inside data symbol "mutexListaTablas"
+==15044== 
+==15044== Possible data race during read of size 4 at 0x668DB54 by thread #9
+==15044== Locks held: 1, at address 0x80521F4
+==15044==    at 0x405A3CE: list_find (in /usr/lib/libcommons.so)
+==15044==    by 0x804DA55: actualizarEstadoPaginacion (mi_ram.c:1748)
+==15044==    by 0x804AB4F: actualizarEstadoTripulante (mi_ram.c:644)
+==15044==    by 0x804A430: atenderDiscordiador (mi_ram.c:443)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== This conflicts with a previous write of size 4 by thread #2
+==15044== Locks held: none
+==15044==    at 0x406792B: pthread_create@@GLIBC_2.1 (pthread_create.c:591)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x668db54 is on thread #9's stack
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044== Possible data race during read of size 4 at 0x668DB54 by thread #9
+==15044== Locks held: none
+==15044==    at 0x804D879: obtenerDireccionFrame (mi_ram.c:1713)
+==15044==    by 0x804DACF: actualizarEstadoPaginacion (mi_ram.c:1760)
+==15044==    by 0x804AB4F: actualizarEstadoTripulante (mi_ram.c:644)
+==15044==    by 0x804A430: atenderDiscordiador (mi_ram.c:443)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== This conflicts with a previous write of size 4 by thread #2
+==15044== Locks held: none
+==15044==    at 0x406792B: pthread_create@@GLIBC_2.1 (pthread_create.c:591)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x668db54 is on thread #9's stack
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044==  Lock at 0x429BBD0 was first observed
+==15044==    at 0x4032F68: pthread_mutex_init (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804D674: llenarFramesConPatota (mi_ram.c:1670)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x429bbd0 is 16 bytes inside a block of size 40 alloc'd
+==15044==    at 0x402D36C: malloc (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804D63A: llenarFramesConPatota (mi_ram.c:1665)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Block was alloc'd by thread #6
+==15044== 
+==15044== Possible data race during read of size 4 at 0x668DB54 by thread #9
+==15044== Locks held: 1, at address 0x429BBD0
+==15044==    at 0x4058F4C: log_info (in /usr/lib/libcommons.so)
+==15044==    by 0x804D2D3: seleccionarVictima (mi_ram.c:1571)
+==15044==    by 0x804CFBA: llevarPaginaASwap (mi_ram.c:1488)
+==15044==    by 0x804CDA8: traerPaginaAMemoria (mi_ram.c:1439)
+==15044==    by 0x804D911: obtenerDireccionFrame (mi_ram.c:1726)
+==15044==    by 0x804DACF: actualizarEstadoPaginacion (mi_ram.c:1760)
+==15044==    by 0x804AB4F: actualizarEstadoTripulante (mi_ram.c:644)
+==15044==    by 0x804A430: atenderDiscordiador (mi_ram.c:443)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== This conflicts with a previous write of size 4 by thread #2
+==15044== Locks held: none
+==15044==    at 0x406792B: pthread_create@@GLIBC_2.1 (pthread_create.c:591)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x668db54 is on thread #9's stack
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044==  Lock at 0x429BBD0 was first observed
+==15044==    at 0x4032F68: pthread_mutex_init (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804D674: llenarFramesConPatota (mi_ram.c:1670)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x429bbd0 is 16 bytes inside a block of size 40 alloc'd
+==15044==    at 0x402D36C: malloc (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804D63A: llenarFramesConPatota (mi_ram.c:1665)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Block was alloc'd by thread #6
+==15044== 
+==15044== Possible data race during read of size 4 at 0x668DB54 by thread #9
+==15044== Locks held: 1, at address 0x429BBD0
+==15044==    at 0x804E799: buscarFrameSwap (mi_ram.c:2035)
+==15044==    by 0x804D04D: llevarPaginaASwap (mi_ram.c:1506)
+==15044==    by 0x804CDA8: traerPaginaAMemoria (mi_ram.c:1439)
+==15044==    by 0x804D911: obtenerDireccionFrame (mi_ram.c:1726)
+==15044==    by 0x804DACF: actualizarEstadoPaginacion (mi_ram.c:1760)
+==15044==    by 0x804AB4F: actualizarEstadoTripulante (mi_ram.c:644)
+==15044==    by 0x804A430: atenderDiscordiador (mi_ram.c:443)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== This conflicts with a previous write of size 4 by thread #2
+==15044== Locks held: none
+==15044==    at 0x406792B: pthread_create@@GLIBC_2.1 (pthread_create.c:591)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x668db54 is on thread #9's stack
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044==  Lock at 0x429BBD0 was first observed
+==15044==    at 0x4032F68: pthread_mutex_init (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804D674: llenarFramesConPatota (mi_ram.c:1670)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x429bbd0 is 16 bytes inside a block of size 40 alloc'd
+==15044==    at 0x402D36C: malloc (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804D63A: llenarFramesConPatota (mi_ram.c:1665)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Block was alloc'd by thread #6
+==15044== 
+==15044==  Lock at 0x8052140 was first observed
+==15044==    at 0x4032F68: pthread_mutex_init (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804A67D: iniciarMemoria (mi_ram.c:503)
+==15044==    by 0x80493FA: main (mi_ram.c:14)
+==15044==  Address 0x8052140 is 0 bytes inside data symbol "mutexListaFramesSwap"
+==15044== 
+==15044== Possible data race during read of size 4 at 0x668DB54 by thread #9
+==15044== Locks held: 2, at addresses 0x429BBD0 0x8052140
+==15044==    at 0x405A3CE: list_find (in /usr/lib/libcommons.so)
+==15044==    by 0x804E7E4: buscarFrameSwap (mi_ram.c:2042)
+==15044==    by 0x804D04D: llevarPaginaASwap (mi_ram.c:1506)
+==15044==    by 0x804CDA8: traerPaginaAMemoria (mi_ram.c:1439)
+==15044==    by 0x804D911: obtenerDireccionFrame (mi_ram.c:1726)
+==15044==    by 0x804DACF: actualizarEstadoPaginacion (mi_ram.c:1760)
+==15044==    by 0x804AB4F: actualizarEstadoTripulante (mi_ram.c:644)
+==15044==    by 0x804A430: atenderDiscordiador (mi_ram.c:443)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== This conflicts with a previous write of size 4 by thread #2
+==15044== Locks held: none
+==15044==    at 0x406792B: pthread_create@@GLIBC_2.1 (pthread_create.c:591)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x668db54 is on thread #9's stack
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044==  Lock at 0x429BBD0 was first observed
+==15044==    at 0x4032F68: pthread_mutex_init (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804D674: llenarFramesConPatota (mi_ram.c:1670)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x429bbd0 is 16 bytes inside a block of size 40 alloc'd
+==15044==    at 0x402D36C: malloc (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804D63A: llenarFramesConPatota (mi_ram.c:1665)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Block was alloc'd by thread #6
+==15044== 
+==15044== Possible data race during read of size 4 at 0x668DB54 by thread #9
+==15044== Locks held: 1, at address 0x429BBD0
+==15044==    at 0x804E80B: buscarFrameSwap (mi_ram.c:2048)
+==15044==    by 0x804D04D: llevarPaginaASwap (mi_ram.c:1506)
+==15044==    by 0x804CDA8: traerPaginaAMemoria (mi_ram.c:1439)
+==15044==    by 0x804D911: obtenerDireccionFrame (mi_ram.c:1726)
+==15044==    by 0x804DACF: actualizarEstadoPaginacion (mi_ram.c:1760)
+==15044==    by 0x804AB4F: actualizarEstadoTripulante (mi_ram.c:644)
+==15044==    by 0x804A430: atenderDiscordiador (mi_ram.c:443)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== This conflicts with a previous write of size 4 by thread #2
+==15044== Locks held: none
+==15044==    at 0x406792B: pthread_create@@GLIBC_2.1 (pthread_create.c:591)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x668db54 is on thread #9's stack
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044==  Lock at 0x429BBD0 was first observed
+==15044==    at 0x4032F68: pthread_mutex_init (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804D674: llenarFramesConPatota (mi_ram.c:1670)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x429bbd0 is 16 bytes inside a block of size 40 alloc'd
+==15044==    at 0x402D36C: malloc (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804D63A: llenarFramesConPatota (mi_ram.c:1665)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Block was alloc'd by thread #6
+==15044== 
+==15044==  Lock at 0x8052140 was first observed
+==15044==    at 0x4032F68: pthread_mutex_init (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804A67D: iniciarMemoria (mi_ram.c:503)
+==15044==    by 0x80493FA: main (mi_ram.c:14)
+==15044==  Address 0x8052140 is 0 bytes inside data symbol "mutexListaFramesSwap"
+==15044== 
+==15044== Possible data race during read of size 4 at 0x668DB54 by thread #9
+==15044== Locks held: 2, at addresses 0x429BBD0 0x8052140
+==15044==    at 0x405A169: list_get (in /usr/lib/libcommons.so)
+==15044==    by 0x804CE8A: traerPaginaAMemoria (mi_ram.c:1460)
+==15044==    by 0x804D911: obtenerDireccionFrame (mi_ram.c:1726)
+==15044==    by 0x804DACF: actualizarEstadoPaginacion (mi_ram.c:1760)
+==15044==    by 0x804AB4F: actualizarEstadoTripulante (mi_ram.c:644)
+==15044==    by 0x804A430: atenderDiscordiador (mi_ram.c:443)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== This conflicts with a previous write of size 4 by thread #2
+==15044== Locks held: none
+==15044==    at 0x406792B: pthread_create@@GLIBC_2.1 (pthread_create.c:591)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x668db54 is on thread #9's stack
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044==  Lock at 0x429BBD0 was first observed
+==15044==    at 0x4032F68: pthread_mutex_init (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804D674: llenarFramesConPatota (mi_ram.c:1670)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x429bbd0 is 16 bytes inside a block of size 40 alloc'd
+==15044==    at 0x402D36C: malloc (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804D63A: llenarFramesConPatota (mi_ram.c:1665)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Block was alloc'd by thread #6
+==15044== 
+==15044== Possible data race during read of size 4 at 0x668DB54 by thread #9
+==15044== Locks held: 1, at address 0x429BBD0
+==15044==    at 0x804E6E9: buscarFrame (mi_ram.c:2015)
+==15044==    by 0x804CEAF: traerPaginaAMemoria (mi_ram.c:1466)
+==15044==    by 0x804D911: obtenerDireccionFrame (mi_ram.c:1726)
+==15044==    by 0x804DACF: actualizarEstadoPaginacion (mi_ram.c:1760)
+==15044==    by 0x804AB4F: actualizarEstadoTripulante (mi_ram.c:644)
+==15044==    by 0x804A430: atenderDiscordiador (mi_ram.c:443)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== This conflicts with a previous write of size 4 by thread #2
+==15044== Locks held: none
+==15044==    at 0x406792B: pthread_create@@GLIBC_2.1 (pthread_create.c:591)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x668db54 is on thread #9's stack
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044==  Lock at 0x429BBD0 was first observed
+==15044==    at 0x4032F68: pthread_mutex_init (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804D674: llenarFramesConPatota (mi_ram.c:1670)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x429bbd0 is 16 bytes inside a block of size 40 alloc'd
+==15044==    at 0x402D36C: malloc (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804D63A: llenarFramesConPatota (mi_ram.c:1665)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Block was alloc'd by thread #6
+==15044== 
+==15044==  Lock at 0x8052184 was first observed
+==15044==    at 0x4032F68: pthread_mutex_init (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804A66B: iniciarMemoria (mi_ram.c:502)
+==15044==    by 0x80493FA: main (mi_ram.c:14)
+==15044==  Address 0x8052184 is 0 bytes inside data symbol "mutexListaFrames"
+==15044== 
+==15044== Possible data race during read of size 4 at 0x668DB54 by thread #9
+==15044== Locks held: 2, at addresses 0x429BBD0 0x8052184
+==15044==    at 0x405A3CE: list_find (in /usr/lib/libcommons.so)
+==15044==    by 0x804E734: buscarFrame (mi_ram.c:2022)
+==15044==    by 0x804CEAF: traerPaginaAMemoria (mi_ram.c:1466)
+==15044==    by 0x804D911: obtenerDireccionFrame (mi_ram.c:1726)
+==15044==    by 0x804DACF: actualizarEstadoPaginacion (mi_ram.c:1760)
+==15044==    by 0x804AB4F: actualizarEstadoTripulante (mi_ram.c:644)
+==15044==    by 0x804A430: atenderDiscordiador (mi_ram.c:443)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== This conflicts with a previous write of size 4 by thread #2
+==15044== Locks held: none
+==15044==    at 0x406792B: pthread_create@@GLIBC_2.1 (pthread_create.c:591)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x668db54 is on thread #9's stack
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044==  Lock at 0x429BBD0 was first observed
+==15044==    at 0x4032F68: pthread_mutex_init (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804D674: llenarFramesConPatota (mi_ram.c:1670)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x429bbd0 is 16 bytes inside a block of size 40 alloc'd
+==15044==    at 0x402D36C: malloc (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804D63A: llenarFramesConPatota (mi_ram.c:1665)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Block was alloc'd by thread #6
+==15044== 
+==15044== Possible data race during read of size 4 at 0x668DB54 by thread #9
+==15044== Locks held: 1, at address 0x429BBD0
+==15044==    at 0x804E76D: buscarFrame (mi_ram.c:2033)
+==15044==    by 0x804CEAF: traerPaginaAMemoria (mi_ram.c:1466)
+==15044==    by 0x804D911: obtenerDireccionFrame (mi_ram.c:1726)
+==15044==    by 0x804DACF: actualizarEstadoPaginacion (mi_ram.c:1760)
+==15044==    by 0x804AB4F: actualizarEstadoTripulante (mi_ram.c:644)
+==15044==    by 0x804A430: atenderDiscordiador (mi_ram.c:443)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== This conflicts with a previous write of size 4 by thread #2
+==15044== Locks held: none
+==15044==    at 0x406792B: pthread_create@@GLIBC_2.1 (pthread_create.c:591)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x668db54 is on thread #9's stack
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044==  Lock at 0x429BBD0 was first observed
+==15044==    at 0x4032F68: pthread_mutex_init (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804D674: llenarFramesConPatota (mi_ram.c:1670)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x429bbd0 is 16 bytes inside a block of size 40 alloc'd
+==15044==    at 0x402D36C: malloc (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804D63A: llenarFramesConPatota (mi_ram.c:1665)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Block was alloc'd by thread #6
+==15044== 
+==15044== Possible data race during read of size 4 at 0x668DB54 by thread #9
+==15044== Locks held: 1, at address 0x429BBD0
+==15044==    at 0x4058F4C: log_info (in /usr/lib/libcommons.so)
+==15044==    by 0x804CFA5: traerPaginaAMemoria (mi_ram.c:1483)
+==15044==    by 0x804D911: obtenerDireccionFrame (mi_ram.c:1726)
+==15044==    by 0x804DACF: actualizarEstadoPaginacion (mi_ram.c:1760)
+==15044==    by 0x804AB4F: actualizarEstadoTripulante (mi_ram.c:644)
+==15044==    by 0x804A430: atenderDiscordiador (mi_ram.c:443)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== This conflicts with a previous write of size 4 by thread #2
+==15044== Locks held: none
+==15044==    at 0x406792B: pthread_create@@GLIBC_2.1 (pthread_create.c:591)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x668db54 is on thread #9's stack
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044==  Lock at 0x429BBD0 was first observed
+==15044==    at 0x4032F68: pthread_mutex_init (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804D674: llenarFramesConPatota (mi_ram.c:1670)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x429bbd0 is 16 bytes inside a block of size 40 alloc'd
+==15044==    at 0x402D36C: malloc (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804D63A: llenarFramesConPatota (mi_ram.c:1665)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Block was alloc'd by thread #6
+==15044== 
+==15044== Possible data race during read of size 4 at 0x668DB54 by thread #9
+==15044== Locks held: 1, at address 0x429BBD0
+==15044==    at 0x405933C: string_from_format (in /usr/lib/libcommons.so)
+==15044==    by 0x4059144: _log_write_in_level (in /usr/lib/libcommons.so)
+==15044==    by 0x4058F6D: log_info (in /usr/lib/libcommons.so)
+==15044==    by 0x804CFA5: traerPaginaAMemoria (mi_ram.c:1483)
+==15044==    by 0x804D911: obtenerDireccionFrame (mi_ram.c:1726)
+==15044==    by 0x804DACF: actualizarEstadoPaginacion (mi_ram.c:1760)
+==15044==    by 0x804AB4F: actualizarEstadoTripulante (mi_ram.c:644)
+==15044==    by 0x804A430: atenderDiscordiador (mi_ram.c:443)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== This conflicts with a previous write of size 4 by thread #2
+==15044== Locks held: none
+==15044==    at 0x406792B: pthread_create@@GLIBC_2.1 (pthread_create.c:591)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x668db54 is on thread #9's stack
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044==  Lock at 0x429BBD0 was first observed
+==15044==    at 0x4032F68: pthread_mutex_init (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804D674: llenarFramesConPatota (mi_ram.c:1670)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x429bbd0 is 16 bytes inside a block of size 40 alloc'd
+==15044==    at 0x402D36C: malloc (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804D63A: llenarFramesConPatota (mi_ram.c:1665)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Block was alloc'd by thread #6
+==15044== 
+==15044== Possible data race during read of size 4 at 0x668DB54 by thread #9
+==15044== Locks held: 1, at address 0x429BBD0
+==15044==    at 0x4058F75: log_info (in /usr/lib/libcommons.so)
+==15044==    by 0x804CFA5: traerPaginaAMemoria (mi_ram.c:1483)
+==15044==    by 0x804D911: obtenerDireccionFrame (mi_ram.c:1726)
+==15044==    by 0x804DACF: actualizarEstadoPaginacion (mi_ram.c:1760)
+==15044==    by 0x804AB4F: actualizarEstadoTripulante (mi_ram.c:644)
+==15044==    by 0x804A430: atenderDiscordiador (mi_ram.c:443)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== This conflicts with a previous write of size 4 by thread #2
+==15044== Locks held: none
+==15044==    at 0x406792B: pthread_create@@GLIBC_2.1 (pthread_create.c:591)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x668db54 is on thread #9's stack
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044== Possible data race during read of size 4 at 0x668DB54 by thread #9
+==15044== Locks held: none
+==15044==    at 0x804D93F: obtenerDireccionFrame (mi_ram.c:1732)
+==15044==    by 0x804DACF: actualizarEstadoPaginacion (mi_ram.c:1760)
+==15044==    by 0x804AB4F: actualizarEstadoTripulante (mi_ram.c:644)
+==15044==    by 0x804A430: atenderDiscordiador (mi_ram.c:443)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== This conflicts with a previous write of size 4 by thread #2
+==15044== Locks held: none
+==15044==    at 0x406792B: pthread_create@@GLIBC_2.1 (pthread_create.c:591)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x668db54 is on thread #9's stack
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044== Possible data race during read of size 4 at 0x668DB54 by thread #9
+==15044== Locks held: none
+==15044==    at 0x804DBC0: actualizarEstadoPaginacion (mi_ram.c:1783)
+==15044==    by 0x804AB4F: actualizarEstadoTripulante (mi_ram.c:644)
+==15044==    by 0x804A430: atenderDiscordiador (mi_ram.c:443)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== This conflicts with a previous write of size 4 by thread #2
+==15044== Locks held: none
+==15044==    at 0x406792B: pthread_create@@GLIBC_2.1 (pthread_create.c:591)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x668db54 is on thread #9's stack
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044== Possible data race during read of size 4 at 0x668DB54 by thread #9
+==15044== Locks held: none
+==15044==    at 0x405933C: string_from_format (in /usr/lib/libcommons.so)
+==15044==    by 0x4059144: _log_write_in_level (in /usr/lib/libcommons.so)
+==15044==    by 0x4058F6D: log_info (in /usr/lib/libcommons.so)
+==15044==    by 0x804A455: atenderDiscordiador (mi_ram.c:444)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== This conflicts with a previous write of size 4 by thread #2
+==15044== Locks held: none
+==15044==    at 0x406792B: pthread_create@@GLIBC_2.1 (pthread_create.c:591)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x668db54 is on thread #9's stack
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044== Possible data race during read of size 4 at 0x668DB54 by thread #9
+==15044== Locks held: none
+==15044==    at 0x4058F75: log_info (in /usr/lib/libcommons.so)
+==15044==    by 0x804A455: atenderDiscordiador (mi_ram.c:444)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== This conflicts with a previous write of size 4 by thread #2
+==15044== Locks held: none
+==15044==    at 0x406792B: pthread_create@@GLIBC_2.1 (pthread_create.c:591)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x668db54 is on thread #9's stack
+==15044== 
+==15044== ---Thread-Announcement------------------------------------------
+==15044== 
+==15044== Thread #12 was created
+==15044==    at 0x4191091: clone (clone.S:88)
+==15044==    by 0x40661AD: create_thread (createthread.c:102)
+==15044==    by 0x406799E: pthread_create@@GLIBC_2.1 (pthread_create.c:679)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044==  Lock at 0x8052260 was first observed
+==15044==    at 0x4032F68: pthread_mutex_init (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804A6B3: iniciarMemoria (mi_ram.c:506)
+==15044==    by 0x80493FA: main (mi_ram.c:14)
+==15044==  Address 0x8052260 is 0 bytes inside data symbol "mutexListaTripulantes"
+==15044== 
+==15044== Possible data race during read of size 4 at 0x668DB54 by thread #12
+==15044== Locks held: 1, at address 0x8052260
+==15044==    at 0x405A3CE: list_find (in /usr/lib/libcommons.so)
+==15044==    by 0x804D9F9: actualizarEstadoPaginacion (mi_ram.c:1744)
+==15044==    by 0x804AB4F: actualizarEstadoTripulante (mi_ram.c:644)
+==15044==    by 0x804A430: atenderDiscordiador (mi_ram.c:443)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== This conflicts with a previous write of size 4 by thread #2
+==15044== Locks held: none
+==15044==    at 0x406792B: pthread_create@@GLIBC_2.1 (pthread_create.c:591)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x668db54 is on thread #12's stack
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044==  Lock at 0x429BBD0 was first observed
+==15044==    at 0x4032F68: pthread_mutex_init (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804D674: llenarFramesConPatota (mi_ram.c:1670)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x429bbd0 is 16 bytes inside a block of size 40 alloc'd
+==15044==    at 0x402D36C: malloc (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804D63A: llenarFramesConPatota (mi_ram.c:1665)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Block was alloc'd by thread #6
+==15044== 
+==15044== Possible data race during read of size 4 at 0x668DB54 by thread #12
+==15044== Locks held: 1, at address 0x429BBD0
+==15044==    at 0x405A3CE: list_find (in /usr/lib/libcommons.so)
+==15044==    by 0x804D8DA: obtenerDireccionFrame (mi_ram.c:1723)
+==15044==    by 0x804DACF: actualizarEstadoPaginacion (mi_ram.c:1760)
+==15044==    by 0x804AB4F: actualizarEstadoTripulante (mi_ram.c:644)
+==15044==    by 0x804A430: atenderDiscordiador (mi_ram.c:443)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== This conflicts with a previous write of size 4 by thread #2
+==15044== Locks held: none
+==15044==    at 0x406792B: pthread_create@@GLIBC_2.1 (pthread_create.c:591)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x668db54 is on thread #12's stack
+==15044== 
+==15044== ---Thread-Announcement------------------------------------------
+==15044== 
+==15044== Thread #24 was created
+==15044==    at 0x4191091: clone (clone.S:88)
+==15044==    by 0x40661AD: create_thread (createthread.c:102)
+==15044==    by 0x406799E: pthread_create@@GLIBC_2.1 (pthread_create.c:679)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== ---Thread-Announcement------------------------------------------
+==15044== 
+==15044== Thread #22 was created
+==15044==    at 0x4191091: clone (clone.S:88)
+==15044==    by 0x40661AD: create_thread (createthread.c:102)
+==15044==    by 0x406799E: pthread_create@@GLIBC_2.1 (pthread_create.c:679)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044==  Lock at 0x429C228 was first observed
+==15044==    at 0x4032F68: pthread_mutex_init (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804D674: llenarFramesConPatota (mi_ram.c:1670)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x429c228 is 16 bytes inside a block of size 40 alloc'd
+==15044==    at 0x402D36C: malloc (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804D63A: llenarFramesConPatota (mi_ram.c:1665)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Block was alloc'd by thread #7
+==15044== 
+==15044==  Lock at 0x8052184 was first observed
+==15044==    at 0x4032F68: pthread_mutex_init (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804A66B: iniciarMemoria (mi_ram.c:502)
+==15044==    by 0x80493FA: main (mi_ram.c:14)
+==15044==  Address 0x8052184 is 0 bytes inside data symbol "mutexListaFrames"
+==15044== 
+==15044==  Lock at 0x429BBD0 was first observed
+==15044==    at 0x4032F68: pthread_mutex_init (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804D674: llenarFramesConPatota (mi_ram.c:1670)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x429bbd0 is 16 bytes inside a block of size 40 alloc'd
+==15044==    at 0x402D36C: malloc (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804D63A: llenarFramesConPatota (mi_ram.c:1665)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Block was alloc'd by thread #6
+==15044== 
+==15044== Possible data race during read of size 4 at 0x428C48C by thread #24
+==15044== Locks held: 2, at addresses 0x429C228 0x8052184
+==15044==    at 0x804D0F7: ultReferenciaLRU.7574 (mi_ram.c:1532)
+==15044==    by 0x405B399: list_fold_elements (in /usr/lib/libcommons.so)
+==15044==    by 0x405AE9D: list_fold1 (in /usr/lib/libcommons.so)
+==15044==    by 0x405AEEC: list_get_minimum (in /usr/lib/libcommons.so)
+==15044==    by 0x804D1A4: seleccionarVictima (mi_ram.c:1546)
+==15044==    by 0x804CFBA: llevarPaginaASwap (mi_ram.c:1488)
+==15044==    by 0x804CDA8: traerPaginaAMemoria (mi_ram.c:1439)
+==15044==    by 0x804D911: obtenerDireccionFrame (mi_ram.c:1726)
+==15044==    by 0x804DACF: actualizarEstadoPaginacion (mi_ram.c:1760)
+==15044==    by 0x804AB4F: actualizarEstadoTripulante (mi_ram.c:644)
+==15044==    by 0x804A430: atenderDiscordiador (mi_ram.c:443)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044== 
+==15044== This conflicts with a previous write of size 4 by thread #22
+==15044== Locks held: 1, at address 0x429BBD0
+==15044==    at 0x804E760: buscarFrame (mi_ram.c:2031)
+==15044==    by 0x804CEAF: traerPaginaAMemoria (mi_ram.c:1466)
+==15044==    by 0x804D911: obtenerDireccionFrame (mi_ram.c:1726)
+==15044==    by 0x804E222: obtenerProximaTareaPaginacion (mi_ram.c:1908)
+==15044==    by 0x804AA0A: obtenerProximaTarea (mi_ram.c:612)
+==15044==    by 0x804A077: atenderDiscordiador (mi_ram.c:347)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==  Address 0x428c48c is 4 bytes inside a block of size 12 alloc'd
+==15044==    at 0x402D36C: malloc (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804CBF8: iniciarFrames (mi_ram.c:1394)
+==15044==    by 0x804A6C5: iniciarMemoria (mi_ram.c:508)
+==15044==    by 0x80493FA: main (mi_ram.c:14)
+==15044==  Block was alloc'd by thread #1
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044==  Lock at 0x429C228 was first observed
+==15044==    at 0x4032F68: pthread_mutex_init (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804D674: llenarFramesConPatota (mi_ram.c:1670)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x429c228 is 16 bytes inside a block of size 40 alloc'd
+==15044==    at 0x402D36C: malloc (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804D63A: llenarFramesConPatota (mi_ram.c:1665)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Block was alloc'd by thread #7
+==15044== 
+==15044==  Lock at 0x8052184 was first observed
+==15044==    at 0x4032F68: pthread_mutex_init (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804A66B: iniciarMemoria (mi_ram.c:502)
+==15044==    by 0x80493FA: main (mi_ram.c:14)
+==15044==  Address 0x8052184 is 0 bytes inside data symbol "mutexListaFrames"
+==15044== 
+==15044==  Lock at 0x429BBD0 was first observed
+==15044==    at 0x4032F68: pthread_mutex_init (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804D674: llenarFramesConPatota (mi_ram.c:1670)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x429bbd0 is 16 bytes inside a block of size 40 alloc'd
+==15044==    at 0x402D36C: malloc (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804D63A: llenarFramesConPatota (mi_ram.c:1665)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Block was alloc'd by thread #6
+==15044== 
+==15044== Possible data race during read of size 4 at 0x428C490 by thread #24
+==15044== Locks held: 2, at addresses 0x429C228 0x8052184
+==15044==    at 0x804D11E: ultReferenciaLRU.7574 (mi_ram.c:1538)
+==15044==    by 0x405B399: list_fold_elements (in /usr/lib/libcommons.so)
+==15044==    by 0x405AE9D: list_fold1 (in /usr/lib/libcommons.so)
+==15044==    by 0x405AEEC: list_get_minimum (in /usr/lib/libcommons.so)
+==15044==    by 0x804D1A4: seleccionarVictima (mi_ram.c:1546)
+==15044==    by 0x804CFBA: llevarPaginaASwap (mi_ram.c:1488)
+==15044==    by 0x804CDA8: traerPaginaAMemoria (mi_ram.c:1439)
+==15044==    by 0x804D911: obtenerDireccionFrame (mi_ram.c:1726)
+==15044==    by 0x804DACF: actualizarEstadoPaginacion (mi_ram.c:1760)
+==15044==    by 0x804AB4F: actualizarEstadoTripulante (mi_ram.c:644)
+==15044==    by 0x804A430: atenderDiscordiador (mi_ram.c:443)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044== 
+==15044== This conflicts with a previous write of size 4 by thread #22
+==15044== Locks held: 1, at address 0x429BBD0
+==15044==    at 0x804CEE7: traerPaginaAMemoria (mi_ram.c:1473)
+==15044==    by 0x804D911: obtenerDireccionFrame (mi_ram.c:1726)
+==15044==    by 0x804E222: obtenerProximaTareaPaginacion (mi_ram.c:1908)
+==15044==    by 0x804AA0A: obtenerProximaTarea (mi_ram.c:612)
+==15044==    by 0x804A077: atenderDiscordiador (mi_ram.c:347)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x428c490 is 8 bytes inside a block of size 12 alloc'd
+==15044==    at 0x402D36C: malloc (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804CBF8: iniciarFrames (mi_ram.c:1394)
+==15044==    by 0x804A6C5: iniciarMemoria (mi_ram.c:508)
+==15044==    by 0x80493FA: main (mi_ram.c:14)
+==15044==  Block was alloc'd by thread #1
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044==  Lock at 0x429C228 was first observed
+==15044==    at 0x4032F68: pthread_mutex_init (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804D674: llenarFramesConPatota (mi_ram.c:1670)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x429c228 is 16 bytes inside a block of size 40 alloc'd
+==15044==    at 0x402D36C: malloc (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804D63A: llenarFramesConPatota (mi_ram.c:1665)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Block was alloc'd by thread #7
+==15044== 
+==15044==  Lock at 0x8052184 was first observed
+==15044==    at 0x4032F68: pthread_mutex_init (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804A66B: iniciarMemoria (mi_ram.c:502)
+==15044==    by 0x80493FA: main (mi_ram.c:14)
+==15044==  Address 0x8052184 is 0 bytes inside data symbol "mutexListaFrames"
+==15044== 
+==15044==  Lock at 0x429BBD0 was first observed
+==15044==    at 0x4032F68: pthread_mutex_init (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804D674: llenarFramesConPatota (mi_ram.c:1670)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x429bbd0 is 16 bytes inside a block of size 40 alloc'd
+==15044==    at 0x402D36C: malloc (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804D63A: llenarFramesConPatota (mi_ram.c:1665)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Block was alloc'd by thread #6
+==15044== 
+==15044==  Lock at 0x8052248 was first observed
+==15044==    at 0x4032F68: pthread_mutex_init (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804A6A1: iniciarMemoria (mi_ram.c:505)
+==15044==    by 0x80493FA: main (mi_ram.c:14)
+==15044==  Address 0x8052248 is 0 bytes inside data symbol "mutexContadorLRU"
+==15044== 
+==15044== Possible data race during read of size 4 at 0x429BAD0 by thread #24
+==15044== Locks held: 2, at addresses 0x429C228 0x8052184
+==15044==    at 0x804D121: ultReferenciaLRU.7574 (mi_ram.c:1538)
+==15044==    by 0x405B399: list_fold_elements (in /usr/lib/libcommons.so)
+==15044==    by 0x405AE9D: list_fold1 (in /usr/lib/libcommons.so)
+==15044==    by 0x405AEEC: list_get_minimum (in /usr/lib/libcommons.so)
+==15044==    by 0x804D1A4: seleccionarVictima (mi_ram.c:1546)
+==15044==    by 0x804CFBA: llevarPaginaASwap (mi_ram.c:1488)
+==15044==    by 0x804CDA8: traerPaginaAMemoria (mi_ram.c:1439)
+==15044==    by 0x804D911: obtenerDireccionFrame (mi_ram.c:1726)
+==15044==    by 0x804DACF: actualizarEstadoPaginacion (mi_ram.c:1760)
+==15044==    by 0x804AB4F: actualizarEstadoTripulante (mi_ram.c:644)
+==15044==    by 0x804A430: atenderDiscordiador (mi_ram.c:443)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044== 
+==15044== This conflicts with a previous write of size 4 by thread #22
+==15044== Locks held: 2, at addresses 0x429BBD0 0x8052248
+==15044==    at 0x804CF3D: traerPaginaAMemoria (mi_ram.c:1478)
+==15044==    by 0x804D911: obtenerDireccionFrame (mi_ram.c:1726)
+==15044==    by 0x804E222: obtenerProximaTareaPaginacion (mi_ram.c:1908)
+==15044==    by 0x804AA0A: obtenerProximaTarea (mi_ram.c:612)
+==15044==    by 0x804A077: atenderDiscordiador (mi_ram.c:347)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x429bad0 is 16 bytes inside a block of size 24 alloc'd
+==15044==    at 0x402D36C: malloc (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804D568: llenarFramesConPatota (mi_ram.c:1640)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Block was alloc'd by thread #6
+==15044== 
+==15044== ---Thread-Announcement------------------------------------------
+==15044== 
+==15044== Thread #27 was created
+==15044==    at 0x4191091: clone (clone.S:88)
+==15044==    by 0x40661AD: create_thread (createthread.c:102)
+==15044==    by 0x406799E: pthread_create@@GLIBC_2.1 (pthread_create.c:679)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== ---Thread-Announcement------------------------------------------
+==15044== 
+==15044== Thread #25 was created
+==15044==    at 0x4191091: clone (clone.S:88)
+==15044==    by 0x40661AD: create_thread (createthread.c:102)
+==15044==    by 0x406799E: pthread_create@@GLIBC_2.1 (pthread_create.c:679)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044==  Lock at 0x429CA48 was first observed
+==15044==    at 0x4032F68: pthread_mutex_init (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804D674: llenarFramesConPatota (mi_ram.c:1670)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x429ca48 is 16 bytes inside a block of size 40 alloc'd
+==15044==    at 0x402D36C: malloc (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804D63A: llenarFramesConPatota (mi_ram.c:1665)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Block was alloc'd by thread #8
+==15044== 
+==15044== Possible data race during write of size 1 at 0x428BB98 by thread #27
+==15044== Locks held: 1, at address 0x429CA48
+==15044==    at 0x40352F2: memcpy (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804CED3: traerPaginaAMemoria (mi_ram.c:1469)
+==15044==    by 0x804D911: obtenerDireccionFrame (mi_ram.c:1726)
+==15044==    by 0x804DACF: actualizarEstadoPaginacion (mi_ram.c:1760)
+==15044==    by 0x804AB4F: actualizarEstadoTripulante (mi_ram.c:644)
+==15044==    by 0x804A430: atenderDiscordiador (mi_ram.c:443)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== This conflicts with a previous read of size 1 by thread #25
+==15044== Locks held: none
+==15044==    at 0x804E25E: obtenerProximaTareaPaginacion (mi_ram.c:1913)
+==15044==    by 0x804AA0A: obtenerProximaTarea (mi_ram.c:612)
+==15044==    by 0x804A077: atenderDiscordiador (mi_ram.c:347)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x428bb98 is 64 bytes inside a block of size 128 alloc'd
+==15044==    at 0x402D36C: malloc (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x80493D2: main (mi_ram.c:12)
+==15044==  Block was alloc'd by thread #1
+==15044== 
+==15044== ---Thread-Announcement------------------------------------------
+==15044== 
+==15044== Thread #30 was created
+==15044==    at 0x4191091: clone (clone.S:88)
+==15044==    by 0x40661AD: create_thread (createthread.c:102)
+==15044==    by 0x406799E: pthread_create@@GLIBC_2.1 (pthread_create.c:679)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== ---Thread-Announcement------------------------------------------
+==15044== 
+==15044== Thread #28 was created
+==15044==    at 0x4191091: clone (clone.S:88)
+==15044==    by 0x40661AD: create_thread (createthread.c:102)
+==15044==    by 0x406799E: pthread_create@@GLIBC_2.1 (pthread_create.c:679)
+==15044==    by 0x4032043: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804967F: servidorPrincipal (mi_ram.c:76)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044==  Lock at 0x429BBD0 was first observed
+==15044==    at 0x4032F68: pthread_mutex_init (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804D674: llenarFramesConPatota (mi_ram.c:1670)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x429bbd0 is 16 bytes inside a block of size 40 alloc'd
+==15044==    at 0x402D36C: malloc (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804D63A: llenarFramesConPatota (mi_ram.c:1665)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Block was alloc'd by thread #6
+==15044== 
+==15044==  Lock at 0x8052184 was first observed
+==15044==    at 0x4032F68: pthread_mutex_init (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804A66B: iniciarMemoria (mi_ram.c:502)
+==15044==    by 0x80493FA: main (mi_ram.c:14)
+==15044==  Address 0x8052184 is 0 bytes inside data symbol "mutexListaFrames"
+==15044== 
+==15044==  Lock at 0x429CA48 was first observed
+==15044==    at 0x4032F68: pthread_mutex_init (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804D674: llenarFramesConPatota (mi_ram.c:1670)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x429ca48 is 16 bytes inside a block of size 40 alloc'd
+==15044==    at 0x402D36C: malloc (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804D63A: llenarFramesConPatota (mi_ram.c:1665)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Block was alloc'd by thread #8
+==15044== 
+==15044== Possible data race during read of size 4 at 0x428BD34 by thread #30
+==15044== Locks held: 2, at addresses 0x429BBD0 0x8052184
+==15044==    at 0x804D106: ultReferenciaLRU.7574 (mi_ram.c:1535)
+==15044==    by 0x405B399: list_fold_elements (in /usr/lib/libcommons.so)
+==15044==    by 0x405AE9D: list_fold1 (in /usr/lib/libcommons.so)
+==15044==    by 0x405AEEC: list_get_minimum (in /usr/lib/libcommons.so)
+==15044==    by 0x804D1A4: seleccionarVictima (mi_ram.c:1546)
+==15044==    by 0x804CFBA: llevarPaginaASwap (mi_ram.c:1488)
+==15044==    by 0x804CDA8: traerPaginaAMemoria (mi_ram.c:1439)
+==15044==    by 0x804D911: obtenerDireccionFrame (mi_ram.c:1726)
+==15044==    by 0x804DACF: actualizarEstadoPaginacion (mi_ram.c:1760)
+==15044==    by 0x804AB4F: actualizarEstadoTripulante (mi_ram.c:644)
+==15044==    by 0x804A430: atenderDiscordiador (mi_ram.c:443)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044== 
+==15044== This conflicts with a previous write of size 4 by thread #28
+==15044== Locks held: 1, at address 0x429CA48
+==15044==    at 0x804E760: buscarFrame (mi_ram.c:2031)
+==15044==    by 0x804CEAF: traerPaginaAMemoria (mi_ram.c:1466)
+==15044==    by 0x804D911: obtenerDireccionFrame (mi_ram.c:1726)
+==15044==    by 0x804E222: obtenerProximaTareaPaginacion (mi_ram.c:1908)
+==15044==    by 0x804AA0A: obtenerProximaTarea (mi_ram.c:612)
+==15044==    by 0x804A077: atenderDiscordiador (mi_ram.c:347)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==  Address 0x428bd34 is 4 bytes inside a block of size 12 alloc'd
+==15044==    at 0x402D36C: malloc (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804CBF8: iniciarFrames (mi_ram.c:1394)
+==15044==    by 0x804A6C5: iniciarMemoria (mi_ram.c:508)
+==15044==    by 0x80493FA: main (mi_ram.c:14)
+==15044==  Block was alloc'd by thread #1
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044==  Lock at 0x429BBD0 was first observed
+==15044==    at 0x4032F68: pthread_mutex_init (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804D674: llenarFramesConPatota (mi_ram.c:1670)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x429bbd0 is 16 bytes inside a block of size 40 alloc'd
+==15044==    at 0x402D36C: malloc (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804D63A: llenarFramesConPatota (mi_ram.c:1665)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Block was alloc'd by thread #6
+==15044== 
+==15044==  Lock at 0x8052184 was first observed
+==15044==    at 0x4032F68: pthread_mutex_init (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804A66B: iniciarMemoria (mi_ram.c:502)
+==15044==    by 0x80493FA: main (mi_ram.c:14)
+==15044==  Address 0x8052184 is 0 bytes inside data symbol "mutexListaFrames"
+==15044== 
+==15044==  Lock at 0x429CA48 was first observed
+==15044==    at 0x4032F68: pthread_mutex_init (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804D674: llenarFramesConPatota (mi_ram.c:1670)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x429ca48 is 16 bytes inside a block of size 40 alloc'd
+==15044==    at 0x402D36C: malloc (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804D63A: llenarFramesConPatota (mi_ram.c:1665)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Block was alloc'd by thread #8
+==15044== 
+==15044== Possible data race during read of size 4 at 0x428BD38 by thread #30
+==15044== Locks held: 2, at addresses 0x429BBD0 0x8052184
+==15044==    at 0x804D115: ultReferenciaLRU.7574 (mi_ram.c:1538)
+==15044==    by 0x405B399: list_fold_elements (in /usr/lib/libcommons.so)
+==15044==    by 0x405AE9D: list_fold1 (in /usr/lib/libcommons.so)
+==15044==    by 0x405AEEC: list_get_minimum (in /usr/lib/libcommons.so)
+==15044==    by 0x804D1A4: seleccionarVictima (mi_ram.c:1546)
+==15044==    by 0x804CFBA: llevarPaginaASwap (mi_ram.c:1488)
+==15044==    by 0x804CDA8: traerPaginaAMemoria (mi_ram.c:1439)
+==15044==    by 0x804D911: obtenerDireccionFrame (mi_ram.c:1726)
+==15044==    by 0x804DACF: actualizarEstadoPaginacion (mi_ram.c:1760)
+==15044==    by 0x804AB4F: actualizarEstadoTripulante (mi_ram.c:644)
+==15044==    by 0x804A430: atenderDiscordiador (mi_ram.c:443)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044== 
+==15044== This conflicts with a previous write of size 4 by thread #28
+==15044== Locks held: 1, at address 0x429CA48
+==15044==    at 0x804CEE7: traerPaginaAMemoria (mi_ram.c:1473)
+==15044==    by 0x804D911: obtenerDireccionFrame (mi_ram.c:1726)
+==15044==    by 0x804E222: obtenerProximaTareaPaginacion (mi_ram.c:1908)
+==15044==    by 0x804AA0A: obtenerProximaTarea (mi_ram.c:612)
+==15044==    by 0x804A077: atenderDiscordiador (mi_ram.c:347)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x428bd38 is 8 bytes inside a block of size 12 alloc'd
+==15044==    at 0x402D36C: malloc (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804CBF8: iniciarFrames (mi_ram.c:1394)
+==15044==    by 0x804A6C5: iniciarMemoria (mi_ram.c:508)
+==15044==    by 0x80493FA: main (mi_ram.c:14)
+==15044==  Block was alloc'd by thread #1
+==15044== 
+==15044== ----------------------------------------------------------------
+==15044== 
+==15044==  Lock at 0x429BBD0 was first observed
+==15044==    at 0x4032F68: pthread_mutex_init (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804D674: llenarFramesConPatota (mi_ram.c:1670)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x429bbd0 is 16 bytes inside a block of size 40 alloc'd
+==15044==    at 0x402D36C: malloc (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804D63A: llenarFramesConPatota (mi_ram.c:1665)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Block was alloc'd by thread #6
+==15044== 
+==15044==  Lock at 0x8052184 was first observed
+==15044==    at 0x4032F68: pthread_mutex_init (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804A66B: iniciarMemoria (mi_ram.c:502)
+==15044==    by 0x80493FA: main (mi_ram.c:14)
+==15044==  Address 0x8052184 is 0 bytes inside data symbol "mutexListaFrames"
+==15044== 
+==15044==  Lock at 0x429CA48 was first observed
+==15044==    at 0x4032F68: pthread_mutex_init (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804D674: llenarFramesConPatota (mi_ram.c:1670)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x429ca48 is 16 bytes inside a block of size 40 alloc'd
+==15044==    at 0x402D36C: malloc (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804D63A: llenarFramesConPatota (mi_ram.c:1665)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Block was alloc'd by thread #8
+==15044== 
+==15044==  Lock at 0x8052248 was first observed
+==15044==    at 0x4032F68: pthread_mutex_init (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804A6A1: iniciarMemoria (mi_ram.c:505)
+==15044==    by 0x80493FA: main (mi_ram.c:14)
+==15044==  Address 0x8052248 is 0 bytes inside data symbol "mutexContadorLRU"
+==15044== 
+==15044== Possible data race during read of size 4 at 0x429C8C8 by thread #30
+==15044== Locks held: 2, at addresses 0x429BBD0 0x8052184
+==15044==    at 0x804D118: ultReferenciaLRU.7574 (mi_ram.c:1538)
+==15044==    by 0x405B399: list_fold_elements (in /usr/lib/libcommons.so)
+==15044==    by 0x405AE9D: list_fold1 (in /usr/lib/libcommons.so)
+==15044==    by 0x405AEEC: list_get_minimum (in /usr/lib/libcommons.so)
+==15044==    by 0x804D1A4: seleccionarVictima (mi_ram.c:1546)
+==15044==    by 0x804CFBA: llevarPaginaASwap (mi_ram.c:1488)
+==15044==    by 0x804CDA8: traerPaginaAMemoria (mi_ram.c:1439)
+==15044==    by 0x804D911: obtenerDireccionFrame (mi_ram.c:1726)
+==15044==    by 0x804DACF: actualizarEstadoPaginacion (mi_ram.c:1760)
+==15044==    by 0x804AB4F: actualizarEstadoTripulante (mi_ram.c:644)
+==15044==    by 0x804A430: atenderDiscordiador (mi_ram.c:443)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044== 
+==15044== This conflicts with a previous write of size 4 by thread #28
+==15044== Locks held: 2, at addresses 0x429CA48 0x8052248
+==15044==    at 0x804CF3D: traerPaginaAMemoria (mi_ram.c:1478)
+==15044==    by 0x804D911: obtenerDireccionFrame (mi_ram.c:1726)
+==15044==    by 0x804E222: obtenerProximaTareaPaginacion (mi_ram.c:1908)
+==15044==    by 0x804AA0A: obtenerProximaTarea (mi_ram.c:612)
+==15044==    by 0x804A077: atenderDiscordiador (mi_ram.c:347)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Address 0x429c8c8 is 16 bytes inside a block of size 24 alloc'd
+==15044==    at 0x402D36C: malloc (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x804D568: llenarFramesConPatota (mi_ram.c:1640)
+==15044==    by 0x8049FB0: atenderDiscordiador (mi_ram.c:310)
+==15044==    by 0x40321E2: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x4067294: start_thread (pthread_create.c:333)
+==15044==    by 0x41910AD: clone (clone.S:114)
+==15044==  Block was alloc'd by thread #8
+==15044== 
+==15044== 
+==15044== Process terminating with default action of signal 2 (SIGINT)
+==15044==    at 0x40683FB: pthread_join (pthread_join.c:90)
+==15044==    by 0x4030149: ??? (in /usr/lib/valgrind/vgpreload_helgrind-x86-linux.so)
+==15044==    by 0x8049487: main (mi_ram.c:31)
+==15044== 
+==15044== For counts of detected and suppressed errors, rerun with: -v
+==15044== Use --history-level=approx or =none to gain increased speed, at
+==15044== the cost of reduced accuracy of conflicting-access information
+==15044== ERROR SUMMARY: 449 errors from 59 contexts (suppressed: 24549 from 402)

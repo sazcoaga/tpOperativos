@@ -1,0 +1,2 @@
+Preguntas Generales:
+-Escribir "Se finaliza la tarea X" solo cuando el tripulante termina la tarea o cuando terminamos de escribir en el bloque. Esperar a que termine el tiempo o cuando llega a la ubicacion?
